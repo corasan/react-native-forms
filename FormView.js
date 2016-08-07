@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Image } from 'react-native';
+import { View, Image, Text } from 'react-native';
 
 export default class FormView extends Component {
     static get defaultProps() {
@@ -9,7 +9,10 @@ export default class FormView extends Component {
     render() {
         return (
             <View style={{paddingLeft: 16, paddingRight: 16, marginTop: 50}}>
-                <Image source={this.props.formLogo} />
+                <View style={{alignItems: 'center'}}>
+                    <Image source={this.props.formLogo} style={{marginBottom: 30}} />
+                    <Text style={{fontSize: 26, color: '#bdc3c7', fontWeight: '600'}}>Login</Text>
+                </View>
                 {this.props.children}
             </View>
         );
